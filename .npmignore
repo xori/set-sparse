@@ -3,3 +3,7 @@ node_modules
 src/*.cpp
 package-lock.json
 .gitignore
+.github
+.nyc_output
+binding.gyp
+test
