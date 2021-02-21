@@ -1,13 +1,14 @@
 {
   "name": "set-sparse",
-  "version": "1.0.0",
-  "description": "Sets the sparse flag on files in Windows x86.",
+  "version": "1.0.1",
+  "description": "A simple function that sets the FSCTL_SET_SPARSE Windows flag to save space in sparse files.",
   "main": "./src/index.js",
   "scripts": {
     "build": "node-gyp rebuild",
     "prepack": "cp ./build/Release/sparse.node ./src/sparse.node",
     "test": "tap --comments --no-coverage -R spec"
   },
+  "cpu": [ "x64" ],
   "keywords": ["windows", "sparse"],
   "author": "Evan Verworn <evan@verworn.ca>",
   "license": "MIT",
@@ -15,5 +16,13 @@
     "fswin": "^3.21.107",
     "node-gyp": "^7.1.2",
     "tap": "^14.11.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xori/set-sparse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xori/set-sparse/issues"
+  },
+  "homepage": "https://github.com/xori/set-sparse"
 }
