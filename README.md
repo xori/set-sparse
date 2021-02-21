@@ -23,6 +23,11 @@ const success = setSparse('./file-to-set', create_if_nonexistant)
 
 On Mac and Linux this library is a no-op and will always return `false`.
 
+## Caveats
+
+* There is no Windows API to turn off sparse mode.
+* Setting the sparse flag does not tell Windows to go clear up space. You should set the flag before writing data to the file.
+* Do not open the file in node with `await open(file, 'w+')` this will disable sparse mode. Use `a+` or `r+`.
 
 ## Development
 
