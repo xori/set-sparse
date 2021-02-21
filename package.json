@@ -1,6 +1,6 @@
 {
   "name": "set-sparse",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Sets the sparse flag on files in Windows x86.",
   "main": "./src/index.js",
   "scripts": {
