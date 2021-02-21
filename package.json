@@ -8,8 +8,13 @@
     "prepack": "cp ./build/Release/sparse.node ./src/sparse.node",
     "test": "tap --comments --no-coverage -R spec"
   },
-  "cpu": [ "x64" ],
-  "keywords": ["windows", "sparse"],
+  "cpu": [
+    "x64"
+  ],
+  "keywords": [
+    "windows",
+    "sparse"
+  ],
   "author": "Evan Verworn <evan@verworn.ca>",
   "license": "MIT",
   "devDependencies": {

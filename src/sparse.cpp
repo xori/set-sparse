@@ -6,6 +6,7 @@ constexpr auto SYB_EXP_INVAL = "EINVAL";
 constexpr auto SYB_ERR_WRONG_ARGUMENTS = "WRONG_ARGUMENTS";
 constexpr auto SYB_ERR_NOT_A_CONSTRUCTOR = "THIS_FUNCTION_IS_NOT_A_CONSTRUCTOR";
 
+namespace sparse {
 
 bool set_sparse(const wchar_t *path, const bool create) {
   bool result = false;
@@ -54,10 +55,15 @@ napi_value wrap_function(napi_env env, napi_callback_info info) {
 }
 
 
-NAPI_MODULE_INIT() {
+napi_value init(napi_env env, napi_value exports) {
   napi_value f;
   napi_create_function(env, NULL, 0, wrap_function, NULL, &f);
   napi_set_named_property(env, exports, "setSparse", f);
 
   return exports;
+}
+
+
+NAPI_MODULE(NODE_GYP_MODULE_NAME, init)
+
 }
