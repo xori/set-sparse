@@ -1,6 +1,6 @@
 {
   "name": "set-sparse",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "A simple function that sets the FSCTL_SET_SPARSE Windows flag to save space in sparse files.",
   "main": "./src/index.js",
   "scripts": {
