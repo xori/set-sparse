@@ -14,7 +14,6 @@
   "engine": {
     "node": ">=10.2"
   },
-  "gypfile": true,
   "binary": {
     "napi_versions": [
       3

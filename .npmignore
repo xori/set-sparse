@@ -7,3 +7,4 @@ package-lock.json
 .nyc_output
 binding.gyp
 test
+*.tgz
