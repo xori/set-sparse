@@ -1,5 +1,4 @@
 #define UNICODE
-#define NAPI_VERSION 3
 #include <windows.h>
 #include <node_api.h>
 

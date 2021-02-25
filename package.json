@@ -1,23 +1,29 @@
 {
   "name": "set-sparse",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A simple function that sets the FSCTL_SET_SPARSE Windows flag to save space in sparse files.",
   "main": "./src/index.js",
   "scripts": {
-    "build:electron": "node-gyp rebuild --target=11.3.0 --arch=x64 --dist-url=https://electronjs.org/headers",
     "build": "node-gyp rebuild",
-    "prepack": "cp ./build/Release/sparse.node ./src/sparse.node",
+    "postbuild": "cp ./build/Release/sparse.node ./src/sparse.node",
     "test": "tap --comments --no-coverage -R spec"
   },
   "cpu": [
     "x64"
   ],
   "engine": {
-    "node": ">=8.11.2"
+    "node": ">=10.2"
+  },
+  "gypfile": true,
+  "binary": {
+    "napi_versions": [
+      3
+    ]
   },
   "keywords": [
     "windows",
-    "sparse"
+    "sparse",
+    "napi"
   ],
   "author": "Evan Verworn <evan@verworn.ca>",
   "license": "MIT",

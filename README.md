@@ -39,3 +39,7 @@ npm run build
 npm run prepack
 npm run test
 ```
+
+## License
+
+MIT
