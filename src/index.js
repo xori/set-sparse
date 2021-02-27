@@ -1,7 +1,10 @@
 const noop = () => false;
 
 try {
-  module.exports = require('./sparse.node').setSparse;
+  module.exports = require('./sparse.node');
 } catch (_) {
-  module.exports = noop;
+  module.exports = {
+    setSparse: noop,
+    holePunch: noop
+  };
 }
